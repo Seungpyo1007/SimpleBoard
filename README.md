@@ -1,53 +1,53 @@
-> Edited for use in IDX on 07/09/12
+# 📝 SimpleBoard - React Native Bulletin Board App
 
-# Welcome to your Expo app 👋
+**SimpleBoard**는 React Native와 Expo를 기반으로 개발된 심플하고 직관적인 **모바일 게시판 앱**입니다. 사용자들은 글을 작성하고, 게시글 목록을 열람하며, 각 게시글의 상세 내용을 확인할 수 있습니다. 이 앱은 게시판 기능의 핵심을 간결하게 담아, 모바일 UI/UX를 고려한 최소한의 기능으로 구성되어 있습니다.
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+<br>
 
-## Get started
+## 🚀 주요 기능
 
-#### Android
+- 📄 게시글 목록 보기 (최신순 정렬)
+- 🖊️ 게시글 작성 기능 (제목, 내용 입력)
+- 🔍 게시글 상세 조회
+- 🧹 게시글 삭제 기능
+- 💾 로컬 상태 저장 (비휘발성 DB 연동 전의 간이 스토리지 구조)
 
-Android previews are defined as a `workspace.onStart` hook and started as a vscode task when the workspace is opened/started.
+<br>
 
-Note, if you can't find the task, either:
-- Rebuild the environment (using command palette: `IDX: Rebuild Environment`), or
-- Run `npm run android -- --tunnel` command manually run android and see the output in your terminal. The device should pick up this new command and switch to start displaying the output from it.
+## 🛠️ 사용 기술 스택
 
-In the output of this command/task, you'll find options to open the app in a
+| 기술 | 설명 |
+|------|------|
+| **React Native** | 크로스 플랫폼 앱 개발 프레임워크 |
+| **Expo** | 빠른 개발과 디버깅을 지원하는 React Native 플랫폼 |
+| **React Navigation** | 화면 간 이동 구현을 위한 라우팅 라이브러리 |
+| **AsyncStorage (또는 useState)** | 간단한 로컬 데이터 저장 처리 |
+| **TypeScript (선택사항)** | 정적 타입을 통한 코드 안정성 향상 |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+<br>
 
-You'll also find options to open the app's developer menu, reload the app, and more.
+## 📁 프로젝트 구조
 
-#### Web
+SimpleBoard/ ├── App.js ├── components/ │ └── PostItem.js ├── screens/ │ ├── HomeScreen.js │ ├── WriteScreen.js │ └── DetailScreen.js ├── navigation/ │ └── StackNavigator.js └── assets/
 
-Web previews will be started and managred automatically. Use the toolbar to manually refresh.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- `HomeScreen`: 게시글 리스트 화면
+- `WriteScreen`: 글쓰기 폼 UI 및 저장 처리
+- `DetailScreen`: 게시글 세부 정보 표시
+- `PostItem`: 게시글을 리스트에서 개별 렌더링하는 컴포넌트
+- `navigation/StackNavigator`: 화면 간 네비게이션 구조 관리
 
-## Get a fresh project
+<br>
 
-When you're ready, run:
+## ⚙️ 설치 및 실행 방법
 
 ```bash
-npm run reset-project
-```
+# 1. 프로젝트 클론
+git clone https://github.com/your-username/SimpleBoard.git
+cd SimpleBoard
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+# 2. 패키지 설치
+npm install
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+# 3. Expo 개발 서버 실행
+npx expo start
