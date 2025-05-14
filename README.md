@@ -99,7 +99,7 @@ $ npx expo start
 
 ---
 
-## 🤩 아키텍처 구성도
+## 아키텍처 구성도
 
 ```
 [React Native 앱] <--> [Flask REST API] <--> [PostgreSQL DB]
@@ -113,4 +113,4 @@ $ npx expo start
 ### 📌 기타
 
 * Firebase Studio는 아직 베타 데이터이며, 건호적인 네트워크 문제 또는 빌드 오류가 발생할 수 있습니다.
-* Expo 앱 실행 시 웹 미리보기 또는 메쮜 QR 스캔 방식이 지원됩니다.
+* Expo 앱 실행 시 웹 미리보기 또는 QR 스캔 방식이 지원됩니다.
