@@ -45,33 +45,7 @@ SimpleBoard/
 
 ## 최종 프로젝트 구조
 
-SimpleBoard/
-├── App.js
-├── package.json
-├── .gitignore
-├── README.md                   # ✅ React Native 앱 기준 메인 설명서
-
-├── components/                # 📦 재사용 가능한 UI 컴포넌트
-├── screens/                   # 📱 게시판 UI 화면 (Home, Write, Detail)
-├── navigation/                # 🧭 화면 전환 설정 (React Navigation)
-├── assets/                    # 🖼️ 이미지 및 기타 리소스
-
-├── backend/                   # 🐍 Flask 백엔드 API 서버
-│   ├── app.py
-│   ├── config.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── requirements.txt
-│   └── .env.example
-
-├── database/                  # 🗃️ PostgreSQL 스키마 정의
-│   └── schema.sql
-
-├── docs/                      # 📚 시스템 아키텍처 및 배포 문서
-│   ├── architecture.md        # 전체 시스템 구조 다이어그램 및 설명
-│   ├── api_spec.md            # Flask API 명세서
-│   └── deployment_guide.md    # EC2 + PostgreSQL + Flask 배포 가이드
-
+<pre> SimpleBoard/ ├── App.js # ✅ React Native 진입점 ├── package.json ├── .gitignore ├── README.md # 프로젝트 소개 문서 ├── components/ # 📦 재사용 가능한 UI 컴포넌트 ├── screens/ # 📱 게시판 UI 화면 (Home, Write, Detail) ├── navigation/ # 🧭 React Navigation 스택 구성 ├── assets/ # 🖼️ 이미지, 아이콘 등 리소스 ├── backend/ # 🐍 Flask 백엔드 API 서버 │ ├── app.py │ ├── config.py │ ├── models.py │ ├── routes.py │ ├── requirements.txt │ └── .env.example ├── database/ # 🗃️ PostgreSQL 스키마 정의 │ └── schema.sql └── docs/ # 📚 시스템 아키텍처 및 배포 문서 ├── architecture.md # 시스템 구조 설명 ├── api_spec.md # API 명세서 └── deployment_guide.md # 배포 가이드 </pre>
 ## ⚙️ 설치 및 실행 방법
 
 ### 📱 React Native (프론트엔드)
