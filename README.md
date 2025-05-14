@@ -25,6 +25,7 @@
 | 데이터베이스 | PostgreSQL |
 | 인프라 | AWS EC2 (Ubuntu) |
 | 상태관리 | useState, AsyncStorage (간이) |
+| 개발환경 | **Firebase Studio (IDX)** ✅ |
 
 ---
 
