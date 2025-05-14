@@ -56,17 +56,17 @@ SimpleBoard/
 ├── README.md                   # ✅ React Native 앱 기준 메인 설명서
 
 ├── components/                # 📦 재사용 가능한 UI 컴포넌트
-├── screens/                   # 📱 게시판 UI 화면 (Home, Write, Detail)
+├── app/                       # 📱 게시판 UI 화면 (Home, Write, Detail)
 ├── navigation/                # 🧭 화면 전환 설정 (React Navigation)
 ├── assets/                    # 🖼️ 이미지 및 기타 리소스
 
 ├── backend/                   # 🐍 Flask 백엔드 API 서버
 │   ├── app.py
-│   ├── config.py
-│   ├── models.py
-│   ├── routes.py
-│   ├── requirements.txt
-│   └── .env.example
+│   ├── config.py              # 필요하면 추가 예정
+│   ├── models.py              # 필요하면 추가 예정
+│   ├── routes.py              # 필요하면 추가 예정
+│   ├── requirements.txt       
+│   └── .env.example           # 필요하면 추가 예정
 
 ├── database/                  # 🗃️ PostgreSQL 스키마 정의
 │   └── schema.sql
