@@ -30,11 +30,11 @@
 
 ## 📁 프로젝트 구조
 
-SimpleBoard/
+```SimpleBoard/
 ├── (React Native Files)
 ├── backend/ # Flask API 서버
 ├── database/ # PostgreSQL 스키마
-├── docs/ # 시스템 문서
+└── docs/ # 시스템 문서```
 
 - `screens/`: 홈, 작성, 상세 화면 구성
 - `backend/`: Flask REST API 서버 코드
