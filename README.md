@@ -39,7 +39,7 @@ SimpleBoard/
 🔽️ docs/ # 시스템 문서
 ```
 
-* [`screens/`](./app): 홈, 작성, 상세 화면 구성
+* [`app/`](./app): 홈, 작성, 상세 화면 구성
 * [`backend/`](./backend): Flask REST API 서버 코드
 * [`database/schema.sql`](./database/schema.sql): PostgreSQL 테이블 구조
 * 시스템 문서:
