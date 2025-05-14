@@ -10,7 +10,7 @@
 
 ---
 
-## 🔧 개발 환경 구성 - Firebase Studio (IDX)
+## 🔧 개발 환경 구성 - Firebase Studio (IDX), IntelliJ IDEA (2024.1.7)
 
 ### ✅ Firebase Studio (IDX) 도입 배경
 
