@@ -108,7 +108,7 @@ $ npx expo start
                   IDX (Firebase Studio)
 ```
 
-**Firebase Studio**는 팀 프로젝트 시 로커루 환경 충돌 없이 동일한 조건의 개발 환경을 제공하는 가장 큰 장점입니다.
+**Firebase Studio**는 팀 프로젝트 시 환경 충돌 없이 동일한 조건의 개발 환경을 제공하는 가장 큰 장점입니다.
 
 ### 📌 기타
 
