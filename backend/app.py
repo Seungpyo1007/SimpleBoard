@@ -1,52 +1,34 @@
-from flask import Flask, jsonify, request
-import psycopg2
-import psycopg2.extras
+from flask import Flask
+from .config import Config
+from .models import db
+from .routes import main_bp
+# If you plan to use Flask-Migrate for database migrations:
+# from flask_migrate import Migrate
 
-app = Flask(__name__)
+def create_app(config_class=Config):
+    app = Flask(__name__)
+    app.config.from_object(config_class)
 
-# PostgreSQL 연결 함수
-def get_db_connection():
-    return psycopg2.connect(
-        host='00.000.00.00',        # AWS EC2의 PostgreSQL IP
-        database='your_db_name',    # 사용할 DB 이름
-        user='your_username',       # DB 사용자 이름
-        password='your_password',   # 비밀번호
-        port=5432                   # 기본 포트
-    )
+    # Initialize extensions
+    db.init_app(app)
+    # If using Flask-Migrate:
+    # migrate = Migrate(app, db)
 
-@app.route('/')
-def home():
-    return 'Flask + PostgreSQL 서버 작동 중!'
+    # Register blueprints
+    app.register_blueprint(main_bp)
 
-@app.route('/users', methods=['GET'])
-def get_users():
-    conn = get_db_connection()
-    cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
-    cursor.execute('SELECT * FROM users;')  # users 테이블
-    rows = cursor.fetchall()
-    cursor.close()
-    conn.close()
+    # Create database tables if they don't exist
+    # This is suitable for development but might need a proper migration strategy for production
+    with app.app_context():
+        db.create_all() # This will create tables based on models.py
 
-    users = [dict(row) for row in rows]
-    return jsonify(users)
+    return app
 
-@app.route('/users', methods=['POST'])
-def add_user():
-    data = request.get_json()
-    name = data.get('name')
-    email = data.get('email')
-
-    conn = get_db_connection()
-    cursor = conn.cursor()
-    cursor.execute(
-        'INSERT INTO users (name, email) VALUES (%s, %s)',
-        (name, email)
-    )
-    conn.commit()
-    cursor.close()
-    conn.close()
-
-    return jsonify({'status': '사용자 추가됨'}), 201
-
+# The following is useful if you run `python backend/app.py` directly
+# However, `flask run` (which uses FLASK_APP) is the more common way.
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app = create_app()
+    # The port and host can be configured via FLASK_RUN_PORT and FLASK_RUN_HOST in .env
+    # or defaults to 5000 and 127.0.0.1 if not set.
+    # app.run(debug=app.config.get('DEBUG', True)) # FLASK_DEBUG is preferred
+    app.run()
