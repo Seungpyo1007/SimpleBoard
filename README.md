@@ -114,3 +114,9 @@ $ npx expo start
 
 * Firebase Studio는 아직 베타 데이터이며, 건호적인 네트워크 문제 또는 빌드 오류가 발생할 수 있습니다.
 * Expo 앱 실행 시 웹 미리보기 또는 QR 스캔 방식이 지원됩니다.
+
+---
+
+## 📄 라이센스 (License)
+
+이 프로젝트는 **MIT License**를 따릅니다. 자세한 내용은 [`LICENSE`](./LICENSE) 파일을 확인하세요.
